@@ -4,8 +4,10 @@ import BusinessCard from "./BusinessCard";
 const BusinessList = ({ businesses }) => {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">All Businesses</h1>
-      <p className="mb-8 text-gray-600">
+      <h1 className="text-3xl font-bold mb-4 mt-5 text-center">
+        All Businesses
+      </h1>
+      <p className="mb-8 text-center text-gray-600">
         Browse through the complete list of businesses and services in our
         community.
       </p>

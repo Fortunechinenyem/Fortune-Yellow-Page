@@ -7,7 +7,7 @@ const businesses = [
   {
     id: 1,
     name: "Sample Business",
-    logo: "/images/sample-logo.png",
+    logo: "",
     category: "Restaurant",
     description:
       "A sample business offering services in the restaurant industry.",

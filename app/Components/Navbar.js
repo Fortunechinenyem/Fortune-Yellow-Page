@@ -8,49 +8,38 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" shadow-md">
+    <nav className="shadow-md bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/">
-                <Image
-                  className=""
-                  src={Logo}
-                  alt="logo"
-                  width={110}
-                  priority
-                />
-              </Link>
-            </div>
-            <div className="hidden md:flex md:space-x-4 md:ml-6">
-              <Link
-                href="/businesses"
-                className="text-gray-800 hover:text-blue-500"
-              >
-                Businesses
-              </Link>
-              <Link
-                href="/create"
-                className="text-gray-800 hover:text-blue-500"
-              >
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link href="/">
+              <Image src={Logo} alt="logo" width={110} priority />
+            </Link>
+          </div>
+          <div className="hidden md:flex space-x-8 ml-auto">
+            <Link
+              href="/businesses"
+              className="text-gray-800 hover:text-blue-500"
+            >
+              Businesses
+            </Link>
+
+            <Link href="/about" className="text-gray-800 hover:text-blue-500">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-800 hover:text-blue-500">
+              Contact
+            </Link>
+            <button>
+              <Link href="/create" className="button">
                 Add Business
               </Link>
-              <Link href="/about" className="text-gray-800 hover:text-blue-500">
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-800 hover:text-blue-500"
-              >
-                Contact
-              </Link>
-            </div>
+            </button>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-blue-500 focus:outline-none"
+              className="text-gray-800 hover:text-blue-500 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -59,14 +48,14 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
               >
                 <path
-                  className={`${isOpen ? "hidden" : "block"}`}
+                  className={isOpen ? "hidden" : "block"}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
                 <path
-                  className={`${isOpen ? "block" : "hidden"}`}
+                  className={isOpen ? "block" : "hidden"}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
@@ -77,32 +66,70 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link
-            href="/businesses"
-            className="text-gray-800 block hover:bg-gray-200 p-2 rounded"
-          >
-            Businesses
-          </Link>
-          <Link
-            href="/create"
-            className="text-gray-800 block hover:bg-gray-200 p-2 rounded"
-          >
-            Add Business
-          </Link>
-          <Link
-            href="/about"
-            className="text-gray-800 block hover:bg-gray-200 p-2 rounded"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-800 block hover:bg-gray-200 p-2 rounded"
-          >
-            Contact
-          </Link>
+      {/* Mobile Menu */}
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:hidden fixed inset-0 bg-black bg-opacity-50 z-50`}
+      >
+        <div className="absolute inset-x-0 top-0 p-2 transition transform origin-top-right">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="pt-5 pb-6 px-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <Image src={Logo} alt="logo" width={110} priority />
+                </div>
+                <div className="-mr-2">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-800 hover:text-blue-500 focus:outline-none"
+                  >
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="mt-6">
+                <nav className="grid gap-y-8">
+                  <Link
+                    href="/businesses"
+                    className="text-gray-800 hover:bg-gray-100 p-3 rounded-md text-base font-medium"
+                  >
+                    Businesses
+                  </Link>
+
+                  <Link
+                    href="/about"
+                    className="text-gray-800 hover:bg-gray-100 p-3 rounded-md text-base font-medium"
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-gray-800 hover:bg-gray-100 p-3 rounded-md text-base font-medium"
+                  >
+                    Contact
+                  </Link>
+                  <button>
+                    <Link href="/create" className="button ">
+                      Add Business
+                    </Link>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
