@@ -8,14 +8,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="shadow-md bg-white">
+    <nav className="shadow-md bg-white ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/">
-              <Image src={Logo} alt="logo" width={110} priority />
-            </Link>
+            <Image src={Logo} alt="logo" width={80} height={40} priority />
           </div>
+
           <div className="hidden md:flex space-x-8 ml-auto">
             <Link
               href="/businesses"
@@ -66,19 +65,26 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* Mobile Menu */}
+
       <div
         className={`${
           isOpen ? "block" : "hidden"
         } md:hidden fixed inset-0 bg-black bg-opacity-50 z-50`}
       >
-        <div className="absolute inset-x-0 top-0 p-2 transition transform origin-top-right">
+        <div className="absolute inset-x-0 top-0 p-4 transition transform origin-top-right">
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                  <Image src={Logo} alt="logo" width={80} priority />
+                <div className="flex items-center">
+                  <Image
+                    src={Logo}
+                    alt="logo"
+                    width={80}
+                    height={40}
+                    priority
+                  />
                 </div>
+
                 <div className="-mr-2">
                   <button
                     onClick={() => setIsOpen(false)}
