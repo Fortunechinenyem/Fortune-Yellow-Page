@@ -77,7 +77,7 @@ const Navbar = () => {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <Image src={Logo} alt="logo" width={110} priority />
+                  <Image src={Logo} alt="logo" width={80} priority />
                 </div>
                 <div className="-mr-2">
                   <button
