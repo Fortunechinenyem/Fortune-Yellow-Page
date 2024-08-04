@@ -12,7 +12,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Image src={Logo} alt="logo" width={80} height={40} priority />
+            <Link href="/" className="">
+              <Image src={Logo} alt="logo" width={80} height={40} priority />
+            </Link>
           </div>
 
           <div className="hidden md:flex space-x-8 ml-auto">
@@ -23,8 +25,8 @@ const Navbar = () => {
               Businesses
             </Link>
 
-            <Link href="/about" className="text-gray-800 hover:text-blue-500">
-              About
+            <Link href="/blog" className="text-gray-800 hover:text-blue-500">
+              Blog
             </Link>
             <Link href="/contact" className="text-gray-800 hover:text-blue-500">
               Contact
@@ -76,13 +78,15 @@ const Navbar = () => {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <Image
-                    src={Logo}
-                    alt="logo"
-                    width={80}
-                    height={40}
-                    priority
-                  />
+                  <Link href="/" className="">
+                    <Image
+                      src={Logo}
+                      alt="logo"
+                      width={80}
+                      height={40}
+                      priority
+                    />
+                  </Link>
                 </div>
 
                 <div className="-mr-2">
@@ -116,10 +120,10 @@ const Navbar = () => {
                   </Link>
 
                   <Link
-                    href="/about"
+                    href="/blog"
                     className="text-gray-800 hover:bg-gray-100 p-3 rounded-md text-base font-medium"
                   >
-                    About
+                    Blog
                   </Link>
                   <Link
                     href="/contact"

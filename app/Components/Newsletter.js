@@ -11,8 +11,10 @@ const Newsletter = () => {
 
   return (
     <section className="text-center ">
-      <h2 className="text-3xl font-bold  mb-6">Stay Updated</h2>
-      <p className="text-lg mb-8">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        Stay Updated
+      </h2>
+      <p className="text-lg text-gray mb-8">
         Subscribe to our newsletter to receive the latest updates and offers.
       </p>
       <form onSubmit={handleSubmit} className="flex justify-center">

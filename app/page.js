@@ -6,6 +6,7 @@ import Testimonials from "./Components/Testimonials";
 import CTA from "./Components/CTA";
 import Newsletter from "./Components/Newsletter";
 import FeaturedBusinesses from "./Components/FeaturedBusiness";
+import About from "./Components/About";
 
 export default function Home() {
   return (
@@ -19,8 +20,12 @@ export default function Home() {
           <FeaturedBusinesses />
         </div>
       </div>
-
-      <div className="mt-16 bg-gray-50 py-12">
+      <div className="mt-16  py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <About />
+        </div>
+      </div>
+      <div className="mt-16 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Testimonials />
         </div>
@@ -30,7 +35,7 @@ export default function Home() {
           <CTA />
         </div>
       </div>
-      <div className="mt-16 py-12">
+      <div className="mt-16  py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <Newsletter />
         </div>

@@ -31,10 +31,10 @@ const CreateYellowpageForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">
+      <h2 className="text-2xl text-center font-bold mb-4">
         Create a Yellowpage for Your Business
       </h2>
-      <p className="mb-6">
+      <p className="mb-6 text-center mb-5 ">
         Fill out the form below to list your business on Fortune
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

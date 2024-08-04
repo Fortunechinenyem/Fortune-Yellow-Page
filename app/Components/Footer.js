@@ -2,20 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className="bg-gray-800 text-white shadow mt-8">
+  <footer className="bg-[#655c3b] text-white shadow mt-8">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex flex-wrap justify-between items-start">
-        {/* About Section */}
-        <div className="w-full md:w-1/3 mb-4 md:mb-0">
-          <h4 className="text-lg font-semibold">About Fortune</h4>
-          <p className="mt-2 text-sm ">
-            Fortune is your trusted business directory, connecting you with the
-            best local businesses and services in our community. Our mission is
-            to support local businesses and make it easy for you to find the
-            services you need.
-          </p>
-        </div>
-        {/* Quick Links Section */}
         <div className="w-full md:w-1/3 mb-4 md:mb-0">
           <h4 className="text-lg font-semibold">Quick Links</h4>
           <ul className="mt-2 text-sm">
@@ -30,8 +19,8 @@ const Footer = () => (
               </Link>
             </li>
             <li className="mb-1">
-              <Link href="/about" className="hover:text-blue-500">
-                About Us
+              <Link href="/blog" className="hover:text-blue-500">
+                Blog
               </Link>
             </li>
             <li className="mb-1">
